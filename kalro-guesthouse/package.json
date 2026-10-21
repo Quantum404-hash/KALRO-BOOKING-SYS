@@ -1,0 +1,14 @@
+{
+  "name": "kalro-guesthouse",
+  "version": "1.0.0",
+  "description": "KALRO Guesthouse management system: rooms, bookings, events, billing and reports",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --no-warnings src/server.js",
+    "clean": "node -e \"require('fs').rmSync('data/kalro.db',{force:true});require('fs').rmSync('data/kalro.db-wal',{force:true});require('fs').rmSync('data/kalro.db-shm',{force:true})\" && KALRO_CLEAN=1 node --no-warnings src/server.js",
+    "reset-demo": "node -e \"require('fs').rmSync('data/kalro.db',{force:true});require('fs').rmSync('data/kalro.db-wal',{force:true});require('fs').rmSync('data/kalro.db-shm',{force:true})\" && node --no-warnings src/server.js"
+  },
+  "engines": { "node": ">=22.13" },
+  "license": "UNLICENSED",
+  "private": true
+}
